@@ -1,0 +1,16 @@
+config:
+  target: "http://localhost:3000"
+  phases:
+    - duration: 10
+      arrivalRate: 30
+      name: Test
+
+scenarios:
+  - name: "Index"
+    flow:
+      - get:
+          url: "/"
+  - name: "Bye"
+    flow:
+      - get:
+          url: "/bye"
